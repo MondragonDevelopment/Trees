@@ -27,6 +27,6 @@ def construct(values):
 
 def search(node, val):
     if node is None: return False
-    if node.val == val: return True
+    if node.val == val: return node                     #True if no need to be specific
     elif val < node.val: return search(node.left, val)
     else: return search(node.right, val)
